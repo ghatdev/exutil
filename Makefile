@@ -10,3 +10,6 @@ bin:
 	@cd upper; cargo build --release;
 	@cd lower; cargo build --release;
 
+install: bin
+	@cp upper/target/release/upper /usr/local/bin
+	@cp lower/target/release/lower /usr/local/bin
