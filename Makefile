@@ -1,15 +1,14 @@
 build: clean bin
 	@mkdir bin
-	@cp upper/target/release/upper bin
-	@cp lower/target/release/lower bin
+	@cp target/release/upper bin
+	@cp target/release/lower bin
 
 clean:
 	@rm -r bin
 
 bin:
-	@cd upper; cargo build --release;
-	@cd lower; cargo build --release;
+	@cargo build  --release
 
 install: bin
-	@cp upper/target/release/upper /usr/local/bin
-	@cp lower/target/release/lower /usr/local/bin
+	@cp target/release/upper /usr/local/bin
+	@cp target/release/lower /usr/local/bin
