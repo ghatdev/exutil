@@ -17,7 +17,7 @@ fn main() {
     let arguments = env::args();
 
     if arguments.len() < 2 {
-        println!("Usage: lower filename-to-upper");
+        println!("Usage: lower filename-to-lower");
         return;
     }
 
